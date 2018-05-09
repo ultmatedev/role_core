@@ -47,8 +47,8 @@ Open your browser, and visit `http://localhost:3000`
 
 The essence of RBAC is the role, despite your application, there are many possibilities: single-role, multi-roles, extendable-role and the role may associate to different kinds of resources (e.g: users and groups)
 
-RoleCore provides a essential definition of Role,
-you have to add association to adapt to your application,
+RoleCore provides an essential definition of Role,
+you have to add an association to adapt to your application,
 for example:
 
 - single-role: adding `one-to-many` association between Role and User
@@ -56,7 +56,7 @@ for example:
 - extendable-role: adding a self-association to Role
 - polymorphic-asscociated-role: consider using polymorphic association technique
 
-Although it's not out-of-box, but it will give you fully flexibility to suit your needs.
+Although it's not out-of-box, it will give you full flexibility to suit your needs.
 
 ### Permissions definition
 
@@ -70,15 +70,15 @@ There also support permission groups, and groups support nesting.
 
 I18n is supported too.
 
-In fact, the essence of permissions is Hash, keys are permissions, and values are booleans. so computing of permissions with many roles, can be understood as computing of Hashes.
+In fact, the essence of permissions is Hash, keys are permissions, and values are booleans. so computing of permissions with many roles can be understood as computing of Hashes.
 
 ### Management UI
 
 Building a management UI is difficult, 
-but virtual model technique will translates permissions to a virtual model's (a class that conforms to ActiveModel) attributes, 
-and groups will translates to nested virtual models,
+but virtual model technique will translate permissions to a virtual model's (a class that conforms to ActiveModel) attributes, 
+and groups will translate to nested virtual models,
 that means you can use all Rails view helpers including the mighty form builder,
-and can benefit to Strong Parameter.
+and can benefit from Strong Parameter.
 
 The dummy app shows that rendering a permission list [only about 20 lines](https://github.com/rails-engine/role_core/blob/master/test/dummy/app/views/roles/_permissions.html.erb).
 
@@ -144,7 +144,7 @@ Check `config/locales/role_core.en.yml`
 
 ### Hook application
 
-In order to obtain maximum customizability, you need to hooking up role(s) to your user model by yourself.
+In order to obtain maximum customizability, you need to hook up role(s) to your user model by yourself.
 
 #### User who has single role
 
